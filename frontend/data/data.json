@@ -1,0 +1,58 @@
+[
+    {
+      "id": 1,
+      "name": "Äpple",
+      "price": "31,90 kr/kg"
+    },
+    {
+      "id": 2,
+      "name": "Banan",
+      "price": "27,90 kr/kg"
+    },
+    {
+      "id": 3,
+      "name": "Apelsin",
+      "price": "26,90 kr/kg"
+    },
+    {
+      "id": 4,
+      "name": "Limpa",
+      "price": "40,90 kr"
+    },
+    {
+      "id": 5,
+      "name": "Rostbröd",
+      "price": "34,90 kr"
+    },
+    {
+      "id": 6,
+      "name": "Mjölk",
+      "price": "19,90 kr"
+    },
+    {
+      "id": 7,
+      "name": "Smör",
+      "price": "33,90 kr"
+    },
+    {
+      "id": 8,
+      "name": "Ägg",
+      "price": "35,90 kr"
+    },
+    {
+      "id": 9,
+      "name": "Juice",
+      "price": "31,90 kr",
+      "img": "assets/Juice.webp"
+    },
+    {
+      "id": 10,
+      "name": "Skinka",
+      "price": "32,90 kr"
+    },
+    {
+      "id": 11,
+      "name": "Ost",
+      "price": "152,90 kr"
+    }
+  ]
