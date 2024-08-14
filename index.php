@@ -19,31 +19,15 @@ $responeObject = json_decode($response);
     <title>COOP</title>
 </head>
 <body>
-    <h1>Matbutik</h1>
-    <?php foreach ($responeObject as $products) {?>
-            <h3>Namn: <?php echo $products->name ?></h3>
-            <h3>Pris: <?php echo $products->price ?></h3>
-       <?php } ?>
-    
-    
+<h1 style="text-align: center;">Matbutik</h1>
+    <div class="product-container">
+        <?php foreach ($responeObject as $products) { ?>
+            <div class="product-card">
+                <img src="<?php echo $products->img; ?>" alt="<?php echo $products->name; ?>">
+                <h3><?php echo $products->name; ?></h3>
+                <p>Pris: <?php echo $products->price; ?> kr/kg</p>
+            </div>
+        <?php } ?>
+    </div>
 </body>
 </html>
-
-<?php
-// $params = ['name' => 'Banan', 'price' => 20];
-
-
-// $defaults = array(
-//     CURLOPT_URL => 'http://localhost:3000/post',
-//     CURLOPT_POST => true,
-//     CURLOPT_POSTFIELDS => http_build_query($params),
-//     CURLOPT_RETURNTRANSFER => true
-// );
-
-// $ch = curl_init();
-// curl_setopt_array($ch, $defaults);
-
-// $response = curl_exec($ch);
-// //var_dump($response); 
-
-// curl_close($ch);
