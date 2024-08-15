@@ -1,4 +1,3 @@
-import {config} from 'dotenv';
 import express from 'express';
 import { connection } from './db/dbconnection.js';
 
