@@ -8,8 +8,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', async (req, res) => {
-res.send("Hello World");
-return;
+
+
     const [result] = await connection.query('SELECT * FROM coop')
 
     res.send(result)
