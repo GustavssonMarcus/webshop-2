@@ -1,6 +1,6 @@
 <?php
-require_once ("pages/Header.php");
-require_once ("pages/Navbar.php");
+require_once "pages/Header.php";
+require_once "pages/Navbar.php";
 
 $ch = curl_init();
 
