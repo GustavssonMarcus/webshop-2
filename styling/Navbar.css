@@ -1,0 +1,30 @@
+.navbar {
+    background-color: #333; /* Mörkgrön färg för Coop */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    color: white;
+}
+
+.navbar h3 {
+    margin: 0;
+    font-size: 28px;
+    color: #006400;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-menu p {
+    margin: 0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.navbar-menu p:hover {
+    color: #006400; /* Gul färg som passar med den gröna */
+}
