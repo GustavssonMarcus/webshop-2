@@ -1,6 +1,6 @@
 <?php
-require_once "pages/Header.php";
-require_once "pages/Navbar.php";
+require_once "pages/layout/Header.php";
+require_once "pages/layout/Navbar.php";
 
 $ch = curl_init();
 
@@ -25,10 +25,10 @@ layout_Navbar();
 
 <body>
 <h1 style="text-align: center;">Vårat sortiment</h1>
-<a href="newproduct.php">
+<a href="pages/newproduct.php">
     <button type="button">Lägg till</button>
 </a>
-<a href="export.php">
+<a href="pages/export.php">
     <button type="button">Exportera till CSV</button>
 </a>
     <div class="product-container">
@@ -37,10 +37,10 @@ layout_Navbar();
                 <h3><?php echo $products->name; ?></h3>
                 <p>Pris: <?php echo $products->price; ?> kr/kg</p>
                 <div>
-                    <a href="/update.php?id=<?php echo $products->id; ?>">
+                    <a href="/pages/update.php?id=<?php echo $products->id; ?>">
                         <button type="button">Uppdatera</button>
                     </a>
-                    <a href="/delete.php?id=<?php echo $products->id; ?>">
+                    <a href="/pages/delete.php?id=<?php echo $products->id; ?>">
                         <button type="button">Ta bort</button>
                     </a>
                 </div>
