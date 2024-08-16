@@ -6,7 +6,8 @@ $ch = curl_init();
 
 //header('Content-type: text/csv');
 
-$url = "https://webshop-2.vercel.app/";
+//$url = "https://webshop-2.vercel.app/";
+$url = "http://localhost:3000";
 
 curl_setopt($ch, CURLOPT_URL, $url);
 
@@ -26,14 +27,22 @@ layout_Navbar();
 
 <body>
 <h1 style="text-align: center;">Vårat sortiment</h1>
+<a href="newproduct.php">
+    <button type="button">Lägg till</button>
+</a>
     <div class="product-container">
         <?php foreach ($responeObject as $products) { ?>
             <div class="product-card">
-                <img src="<?php echo $products->img; ?>" alt="<?php echo $products->name; ?>">
                 <h3><?php echo $products->name; ?></h3>
                 <p>Pris: <?php echo $products->price; ?> kr/kg</p>
-                <button>Köp</button>
-                <button type="submit"><a href="/delete.php?id=<?php echo $products->id?>">Ta bort</a></button>
+                <div>
+                    <a href="/update.php?id=<?php echo $products->id; ?>">
+                        <button type="button">Uppdatera</button>
+                    </a>
+                    <a href="/delete.php?id=<?php echo $products->id; ?>">
+                        <button type="button">Ta bort</button>
+                    </a>
+                </div>
             </div>
         <?php } ?>
     </div>

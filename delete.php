@@ -4,7 +4,8 @@ if (isset($_GET['id'])) {
     $id = $_GET['id'];
  
     $ch = curl_init();
-    $url = "https://webshop-2.vercel.app/delete/$id";
+    $url = "http://localhost:3000/delete/$id";
+    //$url = "http://localhost:3000/delete/$id";
  
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);

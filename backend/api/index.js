@@ -17,20 +17,20 @@ app.get('/', async (req, res) => {
 });
 
 app.post('/post', async (req, res) => {
-    const {name, price, img} = req.body;
-    const [result] = await connection.query('INSERT INTO coop (name, price, img) VALUES (?, ?, ?)', [name, price, img]);
+    const {name, price } = req.body;
+    const [result] = await connection.query('INSERT INTO coop (name, price) VALUES (?, ?)', [name, price]);
 
     res.send({result});
 })
 
 app.put('/put/:id', async (req, res) => {
     const { id } = req.params;
-    const { name, price, img } = req.body;
+    const { name, price  } = req.body;
 
     try {
         const [result] = await connection.query(
-            'UPDATE coop SET name = ?, price = ?, img = ? WHERE id = ?',
-            [name, price, img, id]
+            'UPDATE coop SET name = ?, price = ? WHERE id = ?',
+            [name, price, id]
         );
 
         if (result.affectedRows > 0) {

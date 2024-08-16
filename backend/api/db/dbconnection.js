@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 import { fileURLToPath } from 'node:url';
 console.log(path.dirname(fileURLToPath(import.meta.url)));
 dotenv.config({ path: path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../.env') });
-//console.log(process.env.DB_PORT);
+
 import mysql from 'mysql2/promise';
 // import {config} from 'dotenv';
 
@@ -16,3 +16,4 @@ export const connection = await mysql.createConnection({
     database: process.env.DATABASE,
     port: process.env.DB_PORT
 });
+
