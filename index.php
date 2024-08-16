@@ -6,11 +6,13 @@ $ch = curl_init();
 
 //header('Content-type: text/csv');
 
-$url = "http://localhost:3000";
+$url = "https://webshop-2.vercel.app/";
 
 curl_setopt($ch, CURLOPT_URL, $url);
 
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
 $response = curl_exec($ch);
 $responeObject = json_decode($response);
@@ -31,6 +33,7 @@ layout_Navbar();
                 <h3><?php echo $products->name; ?></h3>
                 <p>Pris: <?php echo $products->price; ?> kr/kg</p>
                 <button>Köp</button>
+                <button type="submit"><a href="/delete.php?id=<?php echo $products->id?>">Ta bort</a></button>
             </div>
         <?php } ?>
     </div>
