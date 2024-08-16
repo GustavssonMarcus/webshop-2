@@ -30,6 +30,9 @@ layout_Navbar();
 <a href="newproduct.php">
     <button type="button">Lägg till</button>
 </a>
+<a href="export.php">
+    <button type="button">Exportera till CSV</button>
+</a>
     <div class="product-container">
         <?php foreach ($responeObject as $products) { ?>
             <div class="product-card">
