@@ -4,8 +4,6 @@ require_once "pages/Navbar.php";
 
 $ch = curl_init();
 
-//header('Content-type: text/csv');
-
 //$url = "https://webshop-2.vercel.app/";
 $url = "http://localhost:3000";
 
